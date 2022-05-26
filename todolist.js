@@ -88,11 +88,10 @@ add.addEventListener('click', function (e) {
 list.addEventListener('click', function (e) {
     e.preventDefault();
     const dataNum = e.target.getAttribute('data-num'); //取出索引值
-    const dataNumToInt = parseInt(dataNum, 10); //索引值轉為整數
     if (e.target.getAttribute('class') === 'delete') {
         data.splice(dataNum, 1);
     } else {
-        const item = data[dataNumToInt] //把物件用變數存起來
+        const item = data[dataNum] //把物件用變數存起來
         if (item.checked === '') {
             item.checked = 'checked';
         } else {
